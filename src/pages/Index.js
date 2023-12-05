@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const meta = {
   title: '',
@@ -23,13 +24,13 @@ export default function Index() {
                 <div className='w-auto'>
                   <div className='flex flex-wrap items-center'>
                     <div className='w-auto'>
-                      <a href='#'>
+                      <Link to='/'>
                         <img
                           src='images/KineticEnergylogo2.png'
                           alt=''
                           className='h-14'
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -38,36 +39,36 @@ export default function Index() {
                     <div className='w-auto hidden lg:block'>
                       <ul className='flex justify-center items-center'>
                         <li className='mr-9'>
-                          <a
+                          <Link
                             className='inline-block font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                            to='#DespreKineticEnergy'
                           >
                             Despre Kinetic Energy
-                          </a>
+                          </Link>
                         </li>
                         <li className='mr-9'>
-                          <a
+                          <Link
                             className='inline-block font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                            to='#Servicii'
                           >
                             Servicii
-                          </a>
+                          </Link>
                         </li>
                         <li className='mr-9'>
-                          <a
+                          <Link
                             className='inline-block font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                            to='#TehnologiiInovatoare'
                           >
                             Tehnologii Inovatoare
-                          </a>
+                          </Link>
                         </li>
                         <li>
-                          <a
+                          <Link
                             className='inline-block font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                            to='#Contact'
                           >
                             Contact
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>
@@ -210,7 +211,7 @@ export default function Index() {
                     </span>
                     <h1 className='font-heading mb-6 text-5xl text-gray-900 font-black tracking-tight'>
                       <span>Bucură-te de o recuperare mai</span>
-                      <span className='text-green-300'>rapidă</span>
+                      <span className='text-green-300 px-3'>rapidă</span>
                       <span>la tine acasă.</span>
                     </h1>
                     <p
@@ -223,12 +224,12 @@ export default function Index() {
                     </p>
                     <div className='flex flex-wrap justify-center -m-2'>
                       <div className='w-full md:w-auto p-2'>
-                        <a
+                        <Link
                           className='block w-full px-4 py-2.5 text-sm text-center text-white font-bold bg-green-200 hover:bg-green-300 focus:ring-4 focus:ring-green-400 rounded-full'
-                          href='#'
+                          to='#Contact'
                         >
                           Programează-te ACUM
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -238,7 +239,7 @@ export default function Index() {
           </div>
         </section>
         <div className='container mx-auto'>
-          <section className='py-20'>
+          <section id="DespreKineticEnergy" className='py-20'>
             <div className='container px-4 mx-auto'>
               <div className='max-w-2xl mx-auto'>
                 <h2 className='mb-10 text-center text-5xl font-semibold text-blue-900'>
@@ -270,7 +271,7 @@ export default function Index() {
             </div>
           </section>
         </div>
-        <section className='py-10 bg-white overflow-hidden'>
+        <section id="Servicii" className='py-10 bg-white overflow-hidden'>
           <div className='container mx-auto px-4'>
             <div
               className='relative py-20 rounded-3xl md:px-8 px-3'
@@ -316,7 +317,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className='bg-gray-50 overflow-hidden'>
+        <section id="TehnologiiInovatoare" className='bg-gray-50 overflow-hidden'>
           <div className='container mx-auto px-4 pt-10'>
             <div className='px-8 rounded-3xl pt-10'>
               <h1 className='mt-2 mb-6 text-center md:text-5xl text-3xl font-semibold text-blue-900'>
@@ -466,7 +467,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        <section className='py-10 bg-gray-50 overflow-hidden'>
+        <section id="Contact" className='py-10 bg-gray-50 overflow-hidden'>
           <div className='container mx-auto px-4'>
             <div className='py-16 px-8 bg-white overflow-hidden border border-gray-100 rounded-3xl'>
               <div className='max-w-7xl mx-auto'>
@@ -509,10 +510,7 @@ export default function Index() {
                       <h3 className='font-heading mb-2 text-xl text-gray-900 font-black'>
                         Email
                       </h3>
-                      <p className='text-gray-500 font-bold'>info@zanrly.com</p>
-                      <p className='text-gray-500 font-bold'>
-                        support@zanrly.com
-                      </p>
+                      <p className='text-gray-500 font-bold'>office.kinetic.energy@gmail.com</p>
                     </div>
                   </div>
                   <div className='w-full lg:w-1/3 p-4'>
@@ -542,8 +540,7 @@ export default function Index() {
                       <h3 className='font-heading mb-2 text-xl text-gray-900 font-black'>
                         Telefon
                       </h3>
-                      <p className='text-gray-500 font-bold'>+1 8424 199 941</p>
-                      <p className='text-gray-500 font-bold'>+1 0221 234 554</p>
+                      <p className='text-gray-500 font-bold'>0745 357 905</p>
                     </div>
                   </div>
                   <div className='w-full lg:w-1/3 p-4'>
@@ -574,10 +571,10 @@ export default function Index() {
                         Adresa
                       </h3>
                       <p className='text-gray-500 font-bold'>
-                        380 St Killda Road, Mellbourne
+                        Str. Principală, Nr. 4A, Localitatea
                       </p>
                       <p className='text-gray-500 font-bold'>
-                        VIC 3004, Australia
+                        Mogoș, Județul Alba
                       </p>
                     </div>
                   </div>
@@ -599,59 +596,59 @@ export default function Index() {
                 </a>
                 <ul className='-m-6 mb-7 text-center'>
                   <li className='inline-flex p-6'>
-                    <a
+                    <Link
                       className='inline-block text-gray-500 hover:text-gray-600 font-bold'
-                      href='#'
+                      to='#DespeKineticEnergy'
                     >
                       Despre Kinetic Energy
-                    </a>
+                    </Link>
                   </li>
                   <li className='inline-flex p-6'>
-                    <a
+                    <Link
                       className='inline-block text-gray-500 hover:text-gray-600 font-bold'
-                      href='#'
+                      to='#Servicii'
                     >
                       Servicii
-                    </a>
+                    </Link>
                   </li>
                   <li className='inline-flex p-6'>
-                    <a
+                    <Link
                       className='inline-block text-gray-500 hover:text-gray-600 font-bold'
-                      href='#'
+                      to='#TehnologiiInovatoare'
                     >
                       Tehnologii Inovatoare
-                    </a>
+                    </Link>
                   </li>
                   <li className='inline-flex p-6'>
-                    <a
+                    <Link
                       className='inline-block text-gray-500 hover:text-gray-600 font-bold'
-                      href='#'
+                      to='#Contact'
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
                 <div className='flex flex-wrap justify-center -m-4 mb-12'>
                   <div className='w-auto p-4'>
-                    <a className='block' href='#'>
-                      <img src='zanrly-assets/images/insta.svg' alt='' />
-                    </a>
+                    <Link className='block' to='https://www.instagram.com/'>
+                      <img src='zanrly-assets/images/insta.svg' alt='Instagram Logo' />
+                    </Link>
                   </div>
                   <div className='w-auto p-4'>
-                    <a className='block' href='#'>
-                      <img src='zanrly-assets/images/twitter.svg' alt='' />
-                    </a>
+                    <Link className='block' href='https://twitter.com/'>
+                      <img src='zanrly-assets/images/twitter.svg' alt='Twitter Logo' />
+                    </Link>
                   </div>
                   <div className='w-auto p-4'>
-                    <a className='block' href='#'>
-                      <img src='zanrly-assets/images/footers/fb.svg' alt='' />
-                    </a>
+                    <Link className='block' href='https://www.facebook.com/'>
+                      <img src='zanrly-assets/images/footers/fb.svg' alt='Facebook Logo' />
+                    </Link>
                   </div>
                 </div>
                 <p className='text-center font-bold'>
                   <span>Ⓒ Copyright. Toate drepturile rezervate de</span>
                   <a className='text-green-200 hover:text-green-300' href='#'>
-                    Kinetic Energy
+                    &nbsp; Kinetic Energy
                   </a>
                 </p>
               </div>
