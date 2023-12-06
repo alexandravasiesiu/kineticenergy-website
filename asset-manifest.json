@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.bd4d1900.js",
+    "main.js": "/static/js/main.cf8ee33b.js",
+    "static/media/KineticEnergylogo1.png": "/static/media/KineticEnergylogo1.e34b25b7d2a4f14d1226.png",
+    "static/media/DEEP-OSCILLATION-Evident_acc-1.png": "/static/media/DEEP-OSCILLATION-Evident_acc-1.f72ee626a7ef07fb7247.png",
+    "static/media/KineticEnergylogo2.png": "/static/media/KineticEnergylogo2.2da27d40c6ed8fb23e5a.png",
+    "static/media/1004_DEEP-OSCILLATION-Evident-1.png": "/static/media/1004_DEEP-OSCILLATION-Evident-1.8816c5dedf43bddc2730.png",
+    "static/media/DEEP-OSCILLATION-EVIDENT-1 (1).png": "/static/media/DEEP-OSCILLATION-EVIDENT-1 (1).eac94a205af63b75f34d.png",
     "index.html": "/index.html",
-    "main.bd4d1900.js.map": "/static/js/main.bd4d1900.js.map"
+    "main.cf8ee33b.js.map": "/static/js/main.cf8ee33b.js.map"
   },
   "entrypoints": [
-    "static/js/main.bd4d1900.js"
+    "static/js/main.cf8ee33b.js"
   ]
 }
