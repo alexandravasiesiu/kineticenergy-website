@@ -1,6 +1,12 @@
 import React from 'react';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import logo1 from '../assets/images/KineticEnergylogo1.png';
+import logo2 from '../assets/images/KineticEnergylogo2.png';
+import { useState } from 'react';
+import ItemOne from '../assets/images/1004_DEEP-OSCILLATION-Evident-1.png';
+import ItemTwo from '../assets/images/DEEP-OSCILLATION-EVIDENT-1 (1).png';
+import ItemThree from '../assets/images/DEEP-OSCILLATION-Evident_acc-1.png';
 
 const meta = {
   title: '',
@@ -11,6 +17,9 @@ const meta = {
 };
 
 export default function Index() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <React.Fragment>
       <HelmetProvider>
@@ -26,8 +35,8 @@ export default function Index() {
                     <div className='w-auto'>
                       <Link to='/'>
                         <img
-                          src='images/KineticEnergylogo2.png'
-                          alt=''
+                          src={logo2}
+                          alt='Logo Kinetic Energy'
                           className='h-14'
                         />
                       </Link>
@@ -77,7 +86,7 @@ export default function Index() {
                 <div className='w-auto'>
                   <div className='flex flex-wrap items-center'>
                     <div className='w-auto lg:hidden'>
-                      <a className='inline-block' href='#'>
+                      <button className='inline-block' onClick={() => setMenuOpen(true)}>
                         <svg
                           className='navbar-burger text-blue-500'
                           width={45}
@@ -100,27 +109,28 @@ export default function Index() {
                             strokeLinejoin='round'
                           />
                         </svg>
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className='hidden navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50'>
+              <div className={`${menuOpen ? "" : "hidden"} navbar-menu fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50`}>
                 <div className='navbar-backdrop fixed inset-0 bg-gray-800 opacity-80' />
                 <nav className='relative z-10 px-9 pt-8 bg-white h-full overflow-y-auto'>
                   <div className='flex flex-wrap justify-between h-full'>
                     <div className='w-full'>
                       <div className='flex items-center justify-between -m-2'>
                         <div className='w-auto p-2'>
-                          <a className='inline-block' href='#'>
+                          <Link className='inline-block' to='/'>
                             <img
-                              src='zanrly-assets/logos/zanrly-logo.svg'
-                              alt=''
+                              src={logo2}
+                              alt='Kinetic Energy Logo'
+                              className='h-14'
                             />
-                          </a>
+                          </Link>
                         </div>
                         <div className='w-auto p-2'>
-                          <a className='inline-block navbar-burger' href='#'>
+                          <button className='inline-block navbar-burger' onClick={() => setMenuOpen(false)}>
                             <svg
                               width={24}
                               height={24}
@@ -136,55 +146,55 @@ export default function Index() {
                                 strokeLinejoin='round'
                               />
                             </svg>
-                          </a>
+                          </button>
                         </div>
                       </div>
                     </div>
                     <div className='flex flex-col justify-center py-8 w-full'>
                       <ul>
                         <li className='mb-9'>
-                          <a
-                            className='inline-block text-sm font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                          <Link
+                            className='inline-block font-bold text-gray-900 hover:text-gray-700'
+                            to='#DespreKineticEnergy'
                           >
-                            Features
-                          </a>
+                            Despre Kinetic Energy
+                          </Link>
                         </li>
                         <li className='mb-9'>
-                          <a
-                            className='inline-block text-sm font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                          <Link
+                            className='inline-block font-bold text-gray-900 hover:text-gray-700'
+                            to='#Servicii'
                           >
-                            Solutions
-                          </a>
+                            Servicii
+                          </Link>
                         </li>
                         <li className='mb-9'>
-                          <a
-                            className='inline-block text-sm font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                          <Link
+                            className='inline-block font-bold text-gray-900 hover:text-gray-700'
+                            to='#TehnologiiInovatoare'
                           >
-                            Resources
-                          </a>
+                            Tehnologii Inovatoare
+                          </Link>
                         </li>
                         <li>
-                          <a
-                            className='inline-block text-sm font-bold text-gray-900 hover:text-gray-700'
-                            href='#'
+                          <Link
+                            className='inline-block font-bold text-gray-900 hover:text-gray-700'
+                            to='#Contact'
                           >
-                            Pricing
-                          </a>
+                            Contact
+                          </Link>
                         </li>
                       </ul>
                     </div>
                     <div className='flex flex-col justify-end w-full pb-8'>
                       <div className='flex flex-wrap -m-2'>
                         <div className='w-full p-2'>
-                          <a
-                            className='block w-full px-4 py-2.5 text-sm text-center text-white font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full'
-                            href='#'
-                          >
-                            Get Started
-                          </a>
+                          <p className='text-center font-semibold'>
+                            <span>Ⓒ Copyright. Toate drepturile rezervate de</span>
+                            <Link className='text-green-200 hover:text-green-300' to='/'>
+                              &nbsp; Kinetic Energy
+                            </Link>
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -197,13 +207,12 @@ export default function Index() {
                 <img
                   className='mx-auto rounded rounded-3xl'
                   src='images/human-skeleton-163715-1920-jpg-1701425075797.webp'
-                  alt=''
+                  alt='Human Skeleton Image'
                 />
               </div>
               <div className='w-full md:flex-1 p-4'>
                 <div
                   className='flex flex-col justify-center items-center p-8 h-full text-center bg-gray-100 rounded-3xl'
-                  contentEditable='false'
                 >
                   <div className='max-w-lg'>
                     <span className='inline-block mb-3 text-sm font-bold uppercase tracking-widest text-green-300'>
@@ -216,7 +225,6 @@ export default function Index() {
                     </h1>
                     <p
                       className='mb-8 text-xl font-bold'
-                      contentEditable='false'
                     >
                       Scapă de grijile cauzate de blocajele din trafic, de
                       timpul petrecut pe drum și de stresul de a ieși din zona
@@ -282,6 +290,7 @@ export default function Index() {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
               }}
+              alt='Medicine Related Background Image'
             >
               <div className='max-w-7xl mx-auto'>
                 <div className='bg-white rounded-3xl md:p-10 p-3'>
@@ -336,13 +345,12 @@ export default function Index() {
                     <img
                       className='mx-auto md:ml-0 rounded-3xl'
                       src='images/lymphastim-block-background3-1649943320-original-copy-1665046465-original.webp'
-                      alt=''
+                      alt='BTL Lymphastim Device Image'
                     />
                   </div>
                   <div className='w-full md:w-1/2 md:p-8 p-3'>
                     <h1
                       className='mt-2 mb-6 md:text-5xl text-3xl text-green-300'
-                      contentEditable='false'
                     >
                       BTL Lymphastim
                     </h1>
@@ -465,7 +473,7 @@ export default function Index() {
                 </div>
               </div>
             </div>
-          </div>
+          </div>V
         </section>
         <section id="Contact" className='py-10 bg-gray-50 overflow-hidden'>
           <div className='container mx-auto px-4'>
@@ -589,8 +597,8 @@ export default function Index() {
               <div className='flex flex-col justify-center'>
                 <a className='inline-block max-w-max mx-auto mb-10' href='#'>
                   <img
-                    src='images/KineticEnergylogo1.png'
-                    alt=''
+                    src={logo1}
+                    alt='Logo Kinetic Energy'
                     className='h-24'
                   />
                 </a>
@@ -647,16 +655,16 @@ export default function Index() {
                 </div>
                 <p className='text-center font-bold'>
                   <span>Ⓒ Copyright. Toate drepturile rezervate de</span>
-                  <a className='text-green-200 hover:text-green-300' href='#'>
+                  <Link className='text-green-200 hover:text-green-300' to='/'>
                     &nbsp; Kinetic Energy
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
           </div>
         </section>
       </>
-    </React.Fragment>
+    </React.Fragment >
   );
 }
 
