@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import logo1 from '../assets/images/KineticEnergylogo1.png';
 import logo2 from '../assets/images/KineticEnergylogo2.png';
 import { useState } from 'react';
+import { Carousel } from 'flowbite-react';
 import ItemOne from '../assets/images/1004_DEEP-OSCILLATION-Evident-1.png';
 import ItemTwo from '../assets/images/DEEP-OSCILLATION-EVIDENT-1 (1).png';
 import ItemThree from '../assets/images/DEEP-OSCILLATION-Evident_acc-1.png';
+
 
 const meta = {
   title: '',
@@ -19,6 +21,37 @@ const meta = {
 export default function Index() {
 
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const customTheme = {
+    "root": {
+      "base": "relative h-full w-full",
+      "leftControl": "absolute top-0 left-0 flex h-full items-center justify-center px-4 focus:outline-none",
+      "rightControl": "absolute top-0 right-0 flex h-full items-center justify-center px-4 focus:outline-none"
+    },
+    "indicators": {
+      "active": {
+        "off": "bg-green-200 hover:bg-green-300 dark:bg-gray-800/50 dark:hover:bg-gray-800",
+        "on": "bg-green-300 dark:bg-gray-800"
+      },
+      "base": "h-3 w-3 rounded-full",
+      "wrapper": "absolute bottom-5 left-1/2 flex -translate-x-1/2 space-x-3"
+    },
+    "item": {
+      "base": "relative top-1/2 left-1/2 block w-full -translate-x-1/2 -translate-y-1/2",
+      "wrapper": {
+        "off": "w-full flex-shrink-0 transform cursor-default snap-center",
+        "on": "w-full flex-shrink-0 transform cursor-grab snap-center"
+      }
+    },
+    "control": {
+      "base": "inline-flex h-8 w-8 items-center justify-center rounded-full bg-green-100 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-green-100 dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 sm:h-10 sm:w-10",
+      "icon": "h-5 w-5 text-green-300 dark:text-gray-800 sm:h-6 sm:w-6"
+    },
+    "scrollContainer": {
+      "base": "flex h-full snap-mandatory overflow-y-hidden overflow-x-scroll scroll-smooth rounded-lg",
+      "snap": "snap-x"
+    }
+  };
 
   return (
     <React.Fragment>
@@ -382,7 +415,7 @@ export default function Index() {
           <div className='container mx-auto px-4'>
             <div className='p-10 bg-white rounded-3xl'>
               <div className='flex flex-wrap -m-8'>
-                <div className='w-full md:w-1/2 md:p-8 p-3'>
+                <div className='w-full lg:w-1/2 md:p-8 p-3'>
                   <div className='py-12 md:max-w-md mx-auto'>
                     <h1 className='mt-2 mb-6 md:text-5xl text-3xl text-green-300'>
                       DEEP OSCILLATION EVIDENT
@@ -423,57 +456,24 @@ export default function Index() {
                     </p>
                   </div>
                 </div>
-                <div className='w-full md:w-1/2 p-8'>
+                <div className='w-full lg:w-1/2 p-8'>
                   <div
-                    className='flex flex-col justify-end py-16 px-8 text-center h-full rounded-3xl'
-                    style={{
-                      backgroundImage:
-                        'url("zanrly-assets/images/sign-in/work.jpg")',
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                      backgroundRepeat: 'no-repeat',
-                    }}
+                    className='flex flex-col justify-end py-16 px-8 text-center h-full rounded-3xl shadow-lg'
+                    leftControl="left" rightControl="right"
                   >
-                    <div className='md:max-w-md mx-auto'>
-                      <h3 className='font-heading mb-3 text-3xl text-white font-black tracking-tight'>
-                        Pure enjoyment with Zanrly
-                      </h3>
-                      <p className='mb-9 text-blue-100 font-bold'>
-                        Lorem ipsum dolor sit amet, to the con adipiscing.
-                        Volutpat tempor to the condim entum.
-                      </p>
-                      <div className='flex flex-wrap justify-center -m-1'>
-                        <div className='w-auto p-1'>
-                          <a
-                            className='inline-block w-3 h-3 bg-white rounded-full'
-                            href='#'
-                          />
-                        </div>
-                        <div className='w-auto p-1'>
-                          <a
-                            className='inline-block w-3 h-3 bg-blue-600 rounded-full'
-                            href='#'
-                          />
-                        </div>
-                        <div className='w-auto p-1'>
-                          <a
-                            className='inline-block w-3 h-3 bg-blue-600 rounded-full'
-                            href='#'
-                          />
-                        </div>
-                        <div className='w-auto p-1'>
-                          <a
-                            className='inline-block w-3 h-3 bg-blue-600 rounded-full'
-                            href='#'
-                          />
-                        </div>
-                      </div>
-                    </div>
+                   
+                    <Carousel theme={customTheme}>
+                      <img src={ItemOne} />
+                      <img src={ItemTwo} />
+                      <img src={ItemThree} />
+                    </Carousel>
+                    
+
                   </div>
                 </div>
               </div>
             </div>
-          </div>V
+          </div>
         </section>
         <section id="Contact" className='py-10 bg-gray-50 overflow-hidden'>
           <div className='container mx-auto px-4'>

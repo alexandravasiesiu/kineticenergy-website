@@ -4,6 +4,7 @@ module.exports = {
         './src/html/*.html',
         './src/**/*.js',
         './public/*.html',
+        'node_modules/flowbite-react/lib/esm/**/*.js',
     ],
     
     theme: {
@@ -1025,5 +1026,5 @@ module.exports = {
         zIndex: ['responsive', 'focus-within', 'focus'],
     },
     corePlugins: {},
-    plugins: [],
+    plugins: [require('flowbite/plugin')],
 }
