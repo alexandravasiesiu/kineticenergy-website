@@ -548,7 +548,7 @@ export default function Index() {
                       <h3 className='font-heading mb-2 text-xl text-gray-900 font-black'>
                         Telefon
                       </h3>
-                      <p className='text-gray-500 font-bold'>0745 357 905</p>
+                      <p className='text-gray-500 font-bold'>0723 365 216</p>
                     </div>
                   </div>
                   <div className='w-full lg:w-1/3 p-4'>
@@ -579,10 +579,10 @@ export default function Index() {
                         Adresa
                       </h3>
                       <p className='text-gray-500 font-bold'>
-                        Str. Principală, Nr. 4A, Localitatea
+                        Str. Tudor Vladimirescu, Nr. 22C,
                       </p>
                       <p className='text-gray-500 font-bold'>
-                        Mogoș, Județul Alba
+                        Alba Iulia, Județul Alba
                       </p>
                     </div>
                   </div>
